@@ -25,14 +25,11 @@
 			<li aria-current={$page.url.pathname === '/temp-converter' ? 'page' : undefined}>
 				<a href="/temp-converter">Temperature Converter</a>
 			</li>
+			<li aria-current={$page.url.pathname === '/user-form' ? 'page' : undefined}>
+				<a href="/user-form">User Form</a>
+			</li>
 			<li aria-current={$page.url.pathname === '/fetch-dog' ? 'page' : undefined}>
 				<a href="/fetch-dog">Fetch Dog</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -105,6 +102,9 @@
 		position: relative;
 		height: 100%;
 	}
+	li &:hover {
+		background-color: var(--color-theme-1);
+	}
 
 	li[aria-current='page']::before {
 		--size: 6px;
@@ -130,9 +130,5 @@
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;
-	}
-
-	a:hover {
-		color: var(--color-theme-1);
 	}
 </style>

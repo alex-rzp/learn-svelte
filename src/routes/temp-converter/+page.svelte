@@ -4,6 +4,7 @@
 
 	function handleFahrenheitInput(event) {
 		const newFahrenheit = parseInt(event.target.value);
+		console.log(newFahrenheit);
 		if (!isNaN(newFahrenheit)) {
 			fahrenheit = newFahrenheit;
 			celsius = ((fahrenheit - 32) * 5) / 9;
