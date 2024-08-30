@@ -22,6 +22,9 @@
 			<li aria-current={$page.url.pathname === '/todo' ? 'page' : undefined}>
 				<a href="/todo">Todo</a>
 			</li>
+			<li aria-current={$page.url.pathname === '/temp-converter' ? 'page' : undefined}>
+				<a href="/temp-converter">Temperature Converter</a>
+			</li>
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
 			</li>
