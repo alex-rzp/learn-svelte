@@ -9,21 +9,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<h1>Counter App</h1>
+<section class="flex flex-col justify-center items-center flex-1">
+	<h1 class="mb-5 text-3xl">Counter App</h1>
 	<Counter />
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-</style>

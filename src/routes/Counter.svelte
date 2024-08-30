@@ -12,75 +12,41 @@
 		return ((n % m) + m) % m;
 	}
 </script>
+
 <section>
-	<div class="counter">
-		<button on:click={() => (count -= 1)} aria-label="Decrease the counter by one">
+	<div class="flex border-y mt-4">
+		<button on:click={() => (count -= 1)} aria-label="Decrease the counter by one" class="btn">
 			<svg aria-hidden="true" viewBox="0 0 1 1">
 				<path d="M0,0.5 L1,0.5" />
 			</svg>
 		</button>
-		
+
 		<div class="counter-viewport">
 			<div class="counter-digits" style="transform: translate(0, {100 * offset}%)">
 				<strong class="hidden" aria-hidden="true">{Math.floor($displayed_count + 1)}</strong>
 				<strong>{Math.floor($displayed_count)}</strong>
 			</div>
 		</div>
-		
-		<button on:click={() => (count += 1)} aria-label="Increase the counter by one">
+
+		<button on:click={() => (count += 1)} aria-label="Increase the counter by one" class="btn">
 			<svg aria-hidden="true" viewBox="0 0 1 1">
 				<path d="M0,0.5 L1,0.5 M0.5,0 L0.5,1" />
 			</svg>
 		</button>
 	</div>
-	<button class="reset-button" on:click={() => (count = 0)} aria-label="Reset counter to zero">
+	<button class="btn !w-full p-3" on:click={() => (count = 0)} aria-label="Reset counter to zero">
 		Reset
 	</button>
 </section>
 
-<style>
-	.counter {
-		display: flex;
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		margin: 1rem 0 0 0;
+<style lang="postcss">
+	.btn {
+		@apply flex flex-col items-center justify-center w-16 hover:bg-slate-300 text-3xl;
 	}
-
-	.reset-button{
-		width: 100%;
-		padding: 1rem 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: 0;
-		background-color: transparent;
-		touch-action: manipulation;
-		font-size: 2rem;
-	}
-	.reset-button:hover {
-		background-color: var(--color-bg-1);
-	}
-	.counter button {
-		width: 2em;
-		padding: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: 0;
-		background-color: transparent;
-		touch-action: manipulation;
-		font-size: 2rem;
-	}
-
-	.counter button:hover {
-		background-color: var(--color-bg-1);
-	}
-
 	svg {
 		width: 25%;
 		height: 25%;
 	}
-
 	path {
 		vector-effect: non-scaling-stroke;
 		stroke-width: 2px;
